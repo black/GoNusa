@@ -1,0 +1,39 @@
+{
+    "data": [
+    {
+        "title": "Activity One",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "2000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": ""
+    },
+    {
+        "title": "Activity Two",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "1500",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": ""
+    },
+    {
+        "title": "Activity Three",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "600",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": ""
+    },
+    {
+        "title": "Activity Four",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": ""
+    }]
+}
