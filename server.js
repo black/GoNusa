@@ -1,11 +1,11 @@
 const express = require('express'),
     bodyParser = require('body-parser'),
-    app = express(); 
-    
-app.use(express.static('public')); 
+    app = express();
 
-let server = app.listen(1357, () => {
-    console.log("Dewi Booking Runing on 1357");
+app.use(express.static('public'));
+
+let server = app.listen(8888, () => {
+    console.log("Dewi Booking Runing on 8888");
 });
 
 // set up view engine
@@ -16,6 +16,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.render('index');
+}).get('/aboutus', (req, res) => {
+    res.render('aboutus');
+}).get('/explore', (re, res) => {
+    res.render('explore');
 });
 
 app.get('/getLists', (req, res) => {

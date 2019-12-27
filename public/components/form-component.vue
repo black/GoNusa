@@ -43,19 +43,19 @@ module.exports = {
 }
 </script>
 <style>
-.form-component {  
+.form-component {
     border: 1px solid #eee;
     padding: 20px;
     border-radius: 5px;
     color: white;
 }
 
-.form{
+.form {
     display: grid;
     grid-row-gap: 10px;
 }
 
-.form>input{
+.form>input {
     padding: 10px;
     border: none;
     border-radius: 3px;

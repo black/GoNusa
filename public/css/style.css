@@ -1,17 +1,29 @@
-html,
+/* html,
 body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-/*     height: 100%;
-min-height: 100%; */
-    background: rgba(196, 205, 224, 0.4);
+    height: 100%;
+    min-height: 100%; 
+    background-color: rgba(0,0,0,0.9);
+   background-image: url('../img/bg2.jpg');
+   filter: grayscale(100%);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
 }
 
 * {
     box-sizing: border-box;
 }
-
+ */
+/*.navbar {
+    background-color: transparent !important;
+    background-image: none;
+}
+*/
+/* 
 .height100 {
     height: 100%;
 }
@@ -29,7 +41,7 @@ min-height: 100%; */
 
 section {
     display: grid;
-    /*	align-items: center;*/
+    align-items: center;
     justify-items: center;
 }
 
@@ -62,8 +74,8 @@ a {
     font-size: 14px;
 }
 
-.brand{
-	color: #44bd32;
+.brand {
+    color: #44bd32;
 }
 
 
@@ -116,7 +128,7 @@ input:focus {
     box-shadow: inset 0px -2px 0px 0px #44bd32;
 }
 
-/*reponsive code */
+reponsive code
 @media screen and (max-width: 600px) {
     .container {
         width: 100%;
@@ -150,10 +162,11 @@ input:focus {
         justify-self: end;
     }
 
-    img {5
-        object-fit: contain;
+    img {
+        5 object-fit: contain;
         max-width: 50px;
         padding: 10px;
     }
 
 }
+  */

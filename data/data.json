@@ -7,7 +7,7 @@
         "currency": "IDR",
         "date": "",
         "imgsrc": "http://lorempixel.com/400/200/sports/",
-        "ratings": ""
+        "ratings": "3"
     },
     {
         "title": "Activity Two",
@@ -16,7 +16,7 @@
         "currency": "IDR",
         "date": "",
         "imgsrc": "http://lorempixel.com/400/200/sports/",
-        "ratings": ""
+        "ratings": "4"
     },
     {
         "title": "Activity Three",
@@ -25,7 +25,7 @@
         "currency": "IDR",
         "date": "",
         "imgsrc": "http://lorempixel.com/400/200/sports/",
-        "ratings": ""
+        "ratings": "5"
     },
     {
         "title": "Activity Four",
@@ -34,6 +34,6 @@
         "currency": "IDR",
         "date": "",
         "imgsrc": "http://lorempixel.com/400/200/sports/",
-        "ratings": ""
+        "ratings": "2"
     }]
 }

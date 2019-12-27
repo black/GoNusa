@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Go Nusa trips</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body class="has-navbar-fixed-top">
+    <div id="app" class="container">
+        <nav class="navbar is-fixed-top container is-transparent" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img class="my-logo start is-fullwidth" src="../img/logo2.svg" width="112" height="28">
+                </a>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item has-text-white" href="/">
+                        Home
+                    </a>
+                    <a class="navbar-item has-text-white" href="/explore">
+                        Explore
+                    </a>
+                    <a class="navbar-item has-text-white" href="/aboutus">
+                        About Us
+                    </a>
+                    <a class="navbar-item has-text-white" href="#footer">
+                        Contact Us
+                    </a>
+                    <a class="navbar-item has-text-white">
+                        FAQ
+                    </a>
+                    <a class="navbar-item has-text-white">
+                        <strong>Sign up</strong>
+                    </a>
+                    <a class="navbar-item has-text-white">
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <section class="section  is-fullheight">
+            <div class="container">
+                <activities-component></activities-component>
+            </div>
+        </section>
+        <section class="section  is-fullheight">
+            <div class="container">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat assumenda delectus unde eveniet praesentium ratione saepe, repellat accusamus deserunt. Ad eaque quis ratione, maiores placeat repellat quod delectus omnis iure reprehenderit minus non nihil, mollitia unde voluptatem aliquam iusto quisquam ipsum ab asperiores. Molestiae cumque deleniti, dignissimos voluptatum illo harum explicabo consequatur facilis, itaque quo, rem. Hic unde error recusandae laborum, quae suscipit voluptatem autem eligendi aspernatur alias quasi accusantium fugiat impedit voluptatibus necessitatibus, id mollitia repellendus, possimus cum architecto, cupiditate atque. Deserunt quod quo possimus nisi, ipsam recusandae, laborum unde sunt itaque quis est, repellat eum alias ipsum eos.
+            </div>
+        </section>
+        <footer id="footer" class="footer columns">
+            <div class="column">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <form-component></form-component>
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+</body>
+
+</html>

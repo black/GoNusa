@@ -1,16 +1,26 @@
 <template>
-    <ul class="activity-component">
-        <li class="collection" v-for="item,i in listContent" v-on:click="openCollection(event)">
-            <img v-bind:src="item.imgsrc" alt="item.imgsrc"><br>
-            <div>
-                <span>{{i}} {{item.title}}</span><br>
-                <span>{{item.description}}</span><br>
-                <span>{{item.currency}} : {{item.price}}</span><br>
-                <span>Ratings : {{item.ratings}}</span><br>
-                <span>Date : {{item.date}}</span>
+    <div class="columns">
+        <div class="column is-3-tablet" v-for="item,i in listContent" v-on:click="openCollection(event)">
+            <div class="card">
+                <div class="card-image">
+                    <figure style="width:100%" class="image is-4by2">
+                        <img v-bind:src="item.imgsrc" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4">{{item.title}}</p>
+                            <p class="subtitle is-6">{{item.ratings}}</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        {{item.description}}
+                    </div>
+                </div>
             </div>
-        </li>
-    </ul>
+        </div>
+    </div>
 </template>
 <script>
 module.exports = {
@@ -60,37 +70,36 @@ module.exports = {
 }
 </script>
 <style>
-.activity-component {
+/* .activity-component {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px; 
+    grid-gap: 10px;
     list-style: none;
-}
+} */
 
-.collection { 
-    border: 1px solid #eee;
+/* .collection { 
     border-radius: 5px;
 }
 
-.collection>img{
-    width: 100%; 
+.collection>img {
+    width: 100%;
     object-fit: cover;
 }
 
-.collection>div{
+.collection>div {
     padding: 20px;
-}
+} */
 
 
-.collection:hover {
+/* .collection:hover {
     background: #eee;
     color: black;
-}
-
+} */
+/* 
 .photos {
     height: 200px;
     background-size: cover;
     background-position: center;
-}
+} */
 </style>
