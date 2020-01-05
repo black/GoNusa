@@ -1,5 +1,5 @@
 <template>
-    <div class="form-component shadow">
+    <div class="column is-3 form-component">
         <span>{{title}}</span>
         <div class="form">
             <input v-model="data.name" placeholder="Name">

@@ -7,7 +7,8 @@
         "currency": "IDR",
         "date": "",
         "imgsrc": "http://lorempixel.com/400/200/sports/",
-        "ratings": "3"
+        "ratings": "3",
+        "offer":"no"
     },
     {
         "title": "Activity Two",
@@ -16,7 +17,8 @@
         "currency": "IDR",
         "date": "",
         "imgsrc": "http://lorempixel.com/400/200/sports/",
-        "ratings": "4"
+        "ratings": "4",
+        "offer":"no"
     },
     {
         "title": "Activity Three",
@@ -25,7 +27,8 @@
         "currency": "IDR",
         "date": "",
         "imgsrc": "http://lorempixel.com/400/200/sports/",
-        "ratings": "5"
+        "ratings": "5",
+        "offer":"no"
     },
     {
         "title": "Activity Four",
@@ -34,6 +37,107 @@
         "currency": "IDR",
         "date": "",
         "imgsrc": "http://lorempixel.com/400/200/sports/",
-        "ratings": "2"
+        "ratings": "2",
+        "offer":"no"
+    },
+    {
+        "title": "Activity Five",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": "5",
+        "offer":"no"
+    },
+    {
+        "title": "Activity Six",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": "2",
+        "offer":"no"
+    },
+    {
+        "title": "Activity Seven",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": "2",
+        "offer":"no"
+    },
+    {
+        "title": "Activity Seven",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": "2",
+        "offer":"no"
+    },
+    {
+        "title": "Activity Five",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": "5",
+        "offer":"no"
+    },
+    {
+        "title": "Activity Six",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": "2",
+        "offer":"no"
+    },
+    {
+        "title": "Activity Seven",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": "2",
+        "offer":"no"
+    },
+    {
+        "title": "Activity Seven",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/sports/",
+        "ratings": "2",
+        "offer":"no"
+    },
+    {
+        "title": "Offers One",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/nature/",
+        "ratings": "2",
+        "offer":"yes"
+    },
+    {
+        "title": "Offers Two",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "imgsrc": "http://lorempixel.com/400/200/nature/",
+        "ratings": "2",
+        "offer":"yes"
     }]
 }

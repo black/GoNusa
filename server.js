@@ -4,8 +4,8 @@ const express = require('express'),
 
 app.use(express.static('public'));
 
-let server = app.listen(8888, () => {
-    console.log("Dewi Booking Runing on 8888");
+let server = app.listen(1200, () => {
+    console.log("Dewi Booking Runing on 1200");
 });
 
 // set up view engine
@@ -20,10 +20,13 @@ app.get('/', (req, res) => {
     res.render('aboutus');
 }).get('/explore', (re, res) => {
     res.render('explore');
+}).get('/admin',(req,res)=>{
+	res.render('admin');
 });
+ 
 
 app.get('/getLists', (req, res) => {
-    res.render('index');
+    //res.render('index');
 });
 
 app.post('/submitQueries', (req, res) => {

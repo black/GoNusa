@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <title>Go Nusa trips</title>
+    <title>Go Nusa trips Admin Page</title>
     <link rel="icon" type="image/png" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 </head>
 
 <body class="has-navbar-fixed-top  is-fullheight">
@@ -30,8 +29,8 @@
                     <a class="navbar-item has-text-white" href="/">
                         Home
                     </a>
-                    <a class="navbar-item has-text-white" href="#offers">
-                        Offers
+                    <a class="navbar-item has-text-white" href="/explore">
+                        Explore
                     </a>
                     <a class="navbar-item has-text-white" href="/aboutus">
                         About Us
@@ -57,64 +56,35 @@
                     <h1 class="is-size-1">
                         <strong>Go Nusa</strong>
                     </h1>
-                    <div class="is-divider" data-content="OR"></div>
-                    <h1 class="subtitle is-size-1">
-                        We plan, You pack!
-                    </h1>
-                    <a class="button is-medium has-text-warning" href="#main-content">
+                    <h2 class="subtitle">
+                        An experince that you never forget!
+                    </h2>
+                    <a class="button is-medium">
                         <span class="icon is-medium">
-                            <i class="material-icons-two-tone">flight_takeoff</i>
+                            <i class="fab fa-github"></i>
                         </span>
-                        <span class="is-size-6">BOOK NOW</span>
+                        <span>BOOK NOW</span>
                     </a>
                 </div>
             </div>
         </section>
-        <section id="main-content" class="hero has-background-black is-fullheight">
-            <div class="container">
-                <h1 class="is-size-1">
-                    <strong>Activities</strong>
-                </h1>
-            </div>
-            <div class="hero-body">
-                <activities-component offer="no"></activities-component>
-            </div>
-        </section>
-        <section id="offers" class="hero has-background-black is-fullheight">
-            <div class="container">
-                <h1 class="is-size-1">
-                    <strong>Activities</strong>
-                </h1>
-            </div>
-            <div class="hero-body">
-                <activities-component offer="yes"></activities-component>
-            </div>
-        </section>
-        <section class="">
-        </section>
-        <section class="hero has-background-success is-fullheight">
-            <div class="hero-body">
-                <div class="container">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, provident consequatur rerum. Alias similique non dolor debitis voluptas sint tempore quis, delectus totam, deserunt et expedita id magni explicabo dolore, blanditiis soluta placeat accusantium, voluptate reiciendis esse earum dolores ipsam sed fuga. Dolores, perspiciatis consequatur. Ab vel ipsa iusto expedita ad ea animi facere ipsam accusamus optio perspiciatis est quae quisquam accusantium tempore tenetur illum minus architecto nam dolorum, debitis, possimus beatae quas excepturi. Expedita temporibus animi aperiam nam. Dignissimos labore molestias eum magnam vero, adipisci quis dolore, voluptatem. Quam, error! Libero ad quo iste esse tempora similique mollitia, dolor.
-                </div>
-            </div>
-        </section>
-        <section class="section is-fullheight">
-            <div class="container">
-                <h1>Our Happy Clients</h1>
-                <testimonial-component></testimonial-component>
-            </div>
-        </section>
-        <section class="hero is-fullheight header-image">
-             <div class="hero-body"> 
-                <div class="container columns">
-                    <form-component></form-component>
-                </div>
-            </div>
-        </section>
+         
         <footer id="footer" class="footer">
             <div class="container">
-                 
+                <div class="columns">
+                    <div class="column">
+                        <div class="content has-text-centered">
+                            <p>
+                                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <form-component></form-component>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>

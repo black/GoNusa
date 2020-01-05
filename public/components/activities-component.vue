@@ -1,6 +1,6 @@
 <template>
-    <div class="columns">
-        <div class="column is-3-tablet" v-for="item,i in listContent" v-on:click="openCollection(event)">
+    <div class="columns is-multiline">
+        <div class="column is-3-desktop" v-if="offer==item.offer" v-for="item,i in listContent" v-on:click="openCollection(event)">
             <div class="card">
                 <div class="card-image">
                     <figure style="width:100%" class="image is-4by2">
@@ -24,6 +24,7 @@
 </template>
 <script>
 module.exports = {
+    props:['offer'],
     data: function() {
         return {
             url: "http://localhost:3000/data",
