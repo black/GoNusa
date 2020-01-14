@@ -1,13 +1,35 @@
 <template>
-    <div class="column is-3 form-component">
-        <span>{{title}}</span>
-        <div class="form">
-            <input v-model="data.name" placeholder="Name">
-            <input v-model="data.email" placeholder="email" type="email" name="email">
-            <input v-model="data.message" placeholder="Message">
-            <button @click="submitForm">UPLOAD</button>
+    <div class="column is-4 is-desktop">
+        <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+                <input v-model="data.name" class="input" type="text" placeholder="Text input">
+            </div>
         </div>
-        <span v-if="status">{{uploadStatus}}</span>
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+                <input v-model="data.email" class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </span>
+            </div>
+            <p class="help is-danger">This email is invalid</p>
+        </div>
+        <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+                <textarea v-model="data.message" class="textarea" placeholder="Textarea"></textarea>
+            </div>
+        </div>
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link" @click="submitForm">SEND</button>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -28,22 +50,28 @@ module.exports = {
     methods: {
         submitForm() {
             axios.post(this.url, this.data, {
-                    onUploadProgress: uploadEvent => {
-                        this.uploadStatus = "Progess...";
-                    }
-                })
-                .then(res => {
-                    this.uploadStatus = "success";
-                }).catch(res => {
-                    this.uploadStatus = "failed";
-                });
+                onUploadProgress: uploadEvent => {
+                    this.uploadStatus = "Progess...";
+                }
+            }).then(res => {
+                this.uploadStatus = "success";
+            }).catch(res => {
+                this.uploadStatus = "failed";
+            }).finally(res => {
+                this.resetForm();
+            })
             this.status = true;
+        },
+        resetForm() {
+            Object.keys(this.data).forEach(key => {
+                this.data[key] = ''
+            });
         }
     }
 }
 </script>
 <style>
-.form-component {
+/* .form-component {
     border: 1px solid #eee;
     padding: 20px;
     border-radius: 5px;
@@ -59,5 +87,5 @@ module.exports = {
     padding: 10px;
     border: none;
     border-radius: 3px;
-}
+} */
 </style>

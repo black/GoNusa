@@ -23,6 +23,8 @@ new Vue({
         'activities-component': httpVueLoader('../components/activities-component.vue'),
         'form-component': httpVueLoader('../components/form-component.vue'), 
         'account-component': httpVueLoader('../components/account-component.vue'),
-        'testimonial-component': httpVueLoader('../components/testimonial-component.vue')
+        'testimonial-component': httpVueLoader('../components/testimonial-component.vue'),
+        'additem-component': httpVueLoader('../components/admin/additem-component.vue'),
+        'updateitem-component': httpVueLoader('../components/admin/updateitem-component.vue')
     }
 });

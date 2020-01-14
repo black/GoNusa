@@ -20,12 +20,16 @@ app.get('/', (req, res) => {
     res.render('aboutus');
 }).get('/explore', (re, res) => {
     res.render('explore');
-}).get('/admin',(req,res)=>{
-	res.render('admin');
+}).get('/admin', (req, res) => {
+    res.render('admin');
 });
- 
+
 
 app.get('/getLists', (req, res) => {
+    //res.render('index');
+});
+
+app.get('/getImages', (req, res) => {
     //res.render('index');
 });
 
@@ -33,3 +37,5 @@ app.post('/submitQueries', (req, res) => {
     console.log("form data", req.body);
     res.send("success");
 });
+
+require('./app/database.js')(app);

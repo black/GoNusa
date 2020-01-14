@@ -1,30 +1,37 @@
 <template>
-    <div class="columns is-multiline">
-        <div class="column is-3-desktop" v-if="offer==item.offer" v-for="item,i in listContent" v-on:click="openCollection(event)">
-            <div class="card">
-                <div class="card-image">
-                    <figure style="width:100%" class="image is-4by2">
-                        <img v-bind:src="item.imgsrc" alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-content">
-                            <p class="title is-4">{{item.title}}</p>
-                            <p class="subtitle is-6">{{item.ratings}}</p>
-                        </div>
+    <div class="columns is-multiline" >
+        <div class="column is-3-desktop" v-on:click="openCollection(event)" v-if="offer==item.offer" v-for="item,i in listContent">
+            <div class="box">
+                <div class="columns is-mobile is-multiline">
+                    <div class="column is-4-mobile is-full-desktop">
+                        <figure class="image is-square">
+                            <img v-bind:src="item.imgsrc">
+                        </figure>
                     </div>
-                    <div class="content">
-                        {{item.description}}
+                    <div class="column is-8-mobile">
+                        <div class="media">
+                            <div class="media-content">
+                                <span class="title is-4">{{item.id}} {{item.title}}</span>
+                                <div>
+                                    <span class="icon is-small has-text-warning is-size-7" v-for="n in parseInt(item.ratings)">
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content is-hidden-mobile">
+                            {{item.description}}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </template>
 <script>
 module.exports = {
-    props:['offer'],
+    props: ['offer'],
     data: function() {
         return {
             url: "http://localhost:3000/data",
@@ -35,10 +42,7 @@ module.exports = {
         }
     },
     methods: {
-        onFileSelected() {
-            bus.$emit('imageurl', this.url);
-        },
-        getImages() {
+        getJSONdata() {
             axios.get(this.url)
                 .then((res) => {
                     this.listContent = res.data;
@@ -66,7 +70,7 @@ module.exports = {
         }
     },
     mounted: function() {
-        this.getImages();
+        this.getJSONdata();
     }
 }
 </script>
