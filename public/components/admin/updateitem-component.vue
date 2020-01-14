@@ -72,26 +72,53 @@ module.exports = {
     methods: {
         submitForm() {
             axios.post(this.url, {
-                postion: this.id,
-                data: this.data
+                "position": this.id,
+                "data": this.data
             }, {
                 onUploadProgress: uploadEvent => {
                     this.uploadStatus = "Progess...";
                 }
             }).then(res => {
-                this.uploadStatus = "success";
+                this.toast("Success");
             }).catch(res => {
-                this.uploadStatus = "failed";
+                this.toast("failed");
             }).finally(res => {
                 this.resetForm();
-            })
+            });
             this.status = true;
         },
         resetForm() {
             Object.keys(this.data).forEach(key => {
                 this.data[key] = ''
             });
+        },
+        receiveEditData() {
+            bus.$on('edit_data', (value) => {
+                this.id = value.id;
+                this.data = JSON.parse(JSON.stringify(value));
+                console.log('data', JSON.stringify(value));
+            });
+        },
+        toast(message) {
+            var options = {
+                style: {
+                    main: {
+                        width:"200px",
+                        borderRadius:"5px",
+                        background: "pink",
+                        color: "black"
+                    }
+                },
+                settings: {
+                    duration: 2000
+                }
+            };
+
+            iqwerty.toast.Toast(message, options);
         }
+    },
+    mounted() {
+        this.receiveEditData();
     }
 }
 </script>

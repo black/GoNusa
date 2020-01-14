@@ -25,6 +25,7 @@ new Vue({
         'account-component': httpVueLoader('../components/account-component.vue'),
         'testimonial-component': httpVueLoader('../components/testimonial-component.vue'),
         'additem-component': httpVueLoader('../components/admin/additem-component.vue'),
-        'updateitem-component': httpVueLoader('../components/admin/updateitem-component.vue')
+        'updateitem-component': httpVueLoader('../components/admin/updateitem-component.vue'),
+        'itemlist-component': httpVueLoader('../components/admin/itemlist-component.vue')
     }
 });
