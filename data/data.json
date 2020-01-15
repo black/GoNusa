@@ -2,13 +2,13 @@
   "data": [
     {
       "id": 1,
-      "title": "Activitdasdy ",
-      "description": " ipsum a  sit amet.",
+      "title": "Activity Test",
+      "description": "Lorem ipsum desum",
       "price": "1000",
-      "currency": "USD",
+      "currency": "INR",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200/nature",
-      "ratings": "3",
+      "ratings": "5",
       "offer": "YES"
     },
     {
@@ -25,13 +25,13 @@
     {
       "id": 3,
       "title": "Mega trip",
-      "description": "A destination that you are looking forward to",
-      "price": "4985",
-      "currency": "USD",
+      "description": "A destination ",
+      "price": "2530",
+      "currency": "IDR",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200/nature",
       "ratings": "3",
-      "offer": "NO"
+      "offer": "YES"
     },
     {
       "id": 4,
@@ -41,18 +41,18 @@
       "currency": "IDR",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200",
-      "ratings": "2",
+      "ratings": "5",
       "offer": "YES"
     },
     {
       "id": 5,
       "title": "Activity Three",
       "description": "Lorem ipsum dolor sit amet.",
-      "price": "600",
+      "price": "6000",
       "currency": "IDR",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200",
-      "ratings": "5",
+      "ratings": "4",
       "offer": "NO"
     },
     {

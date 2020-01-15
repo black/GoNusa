@@ -12,13 +12,28 @@
 </head>
 
 <body class="has-navbar-fixed-top  is-fullheight">
-    <div id="app">
-        <!-- show all items -->
-        <!-- login -->
-        <!-- logout -->
-        <!-- complex-route-name -->
+    <div id="app" class="container">
         <div class="columns">
             <div class="column is-2">
+                <div>
+                    <aside class="menu">
+                        <p class="menu-label">
+                            General
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Dashboard</a></li>
+                            <li><a>Customers</a></li>
+                        </ul> 
+                        <p class="menu-label">
+                            Transactions
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Payments</a></li>
+                            <li><a>Transfers</a></li>
+                            <li><a>Balance</a></li>
+                        </ul>
+                    </aside>
+                </div>
             </div>
             <div class="column">
                 <itemlist-component></itemlist-component>
@@ -26,7 +41,7 @@
             <div class="column is-3">
                 <updateitem-component></updateitem-component>
                 <br><br>
-                <span class="title is-6 is-spaced"> 
+                <span class="title is-6 is-spaced">
                     <span class="has-text-grey-light bd-anchor-link">
                         #
                     </span>

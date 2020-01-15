@@ -1,5 +1,14 @@
 <template>
     <div class="columns is-multiline">
+        <div class="tabs is-centered">
+            <ul>
+                <li class="is-active"><a>All</a></li>
+                <li><a>Adventure</a></li>
+                <li><a>Hotels</a></li>
+                <li><a>Spa</a></li>
+                <li><a>Something Else</a></li>
+            </ul>
+        </div>
         <div class="column is-6-desktop" v-on:click="updateData(item,i)" v-for="item,i in listContent">
             <div class="box" :class="{'active-edit': i == activeIndex}">
                 <div class="columns">
@@ -92,6 +101,7 @@ module.exports = {
         this.getJSONdata();
         bus.$on('success-updated', (res) => {
             this.getJSONdata();
+            this.activeIndex = null;
         });
     }
 }
