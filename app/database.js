@@ -13,8 +13,8 @@ module.exports = (app) => {
             console.log(error);
         });
     }).post('/updateItem', (req, res) => {
-        console.log("all items", req.body);
-        axios.put('http://localhost:3000/data/' + req.body.position, req.body.data).then(resp => {
+        console.log("all items", req.body.id);
+        axios.put('http://localhost:3000/data/' + req.body.id, req.body).then(resp => {
             res.send('added new item');
             console.log("Updated item");
         }).catch(error => {

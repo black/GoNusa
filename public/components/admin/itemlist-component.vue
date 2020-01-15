@@ -1,17 +1,17 @@
 <template>
     <div class="columns is-multiline">
-        <div class="column is-4-desktop" v-on:click="updateData(item)" v-for="item,i in listContent">
-            <div class="box">
-                <div class="columns is-mobile is-multiline">
-                    <div class="column is-4-mobile is-full-desktop">
+        <div class="column is-6-desktop" v-on:click="updateData(item,i)" v-for="item,i in listContent">
+            <div class="box" :class="{'active-edit': i == activeIndex}">
+                <div class="columns">
+                    <div class="column is-4">
                         <figure class="image is-square">
                             <img v-bind:src="item.imgsrc">
                         </figure>
                     </div>
-                    <div class="column is-8-mobile">
+                    <div class="column">
                         <div class="media">
                             <div class="media-content">
-                                <span class="title is-4">{{item.id}} {{item.title}}</span>
+                                <span class="title is-6">{{item.id}} {{item.title}}</span>
                                 <div>
                                     <span class="icon is-small has-text-warning is-size-7" v-for="n in parseInt(item.ratings)">
                                         <i class="fas fa-star"></i>
@@ -19,8 +19,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="content is-hidden-mobile">
+                        <div class="content is-hidden-mobile is-size-7">
                             {{item.description}}
+                            <div class="is-size-6">
+                                {{item.currency}} <strong>{{item.price}}</strong>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -35,7 +38,8 @@ module.exports = {
             url: "http://localhost:3000/data",
             title: 'Activities List',
             downloadStatus: '',
-            listContent: []
+            listContent: [],
+            activeIndex: null
         }
     },
     methods: {
@@ -53,16 +57,18 @@ module.exports = {
                     //his.toast("Completed Request");
                 });
         },
-        updateData(data) {
-            bus.$emit('edit_data', data);
+        updateData(data, index) {
+            this.activeIndex = index;
+            bus.$emit('edit_data', JSON.stringify(data));
         },
         toast(message) {
             var options = {
                 style: {
                     main: {
-                        width:"200px",
-                        borderRadius:"5px",
-                        background: "pink",
+                        width: "200px",
+                        borderRadius: "5px",
+                        border: "1px solid #ddd",
+                        background: "#eee",
                         color: "black"
                     }
                 },
@@ -84,17 +90,17 @@ module.exports = {
     },
     mounted() {
         this.getJSONdata();
+        bus.$on('success-updated', (res) => {
+            this.getJSONdata();
+        });
     }
 }
 </script>
 <style>
-/* .activity-component {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    list-style: none;
-} */
+.active-edit {
+    border: 1px solid #4a148c;
+    background: #eee;
+}
 
 /* .collection { 
     border-radius: 5px;

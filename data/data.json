@@ -2,14 +2,14 @@
   "data": [
     {
       "id": 1,
-      "title": "Activitdasdy Reset",
-      "description": " ipsum asdasdadsdaddolor sit amet.",
-      "price": "4997",
-      "currency": "IDR",
+      "title": "Activitdasdy ",
+      "description": " ipsum a  sit amet.",
+      "price": "1000",
+      "currency": "USD",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200/nature",
       "ratings": "3",
-      "offer": "NO"
+      "offer": "YES"
     },
     {
       "id": 2,
@@ -24,13 +24,13 @@
     },
     {
       "id": 3,
-      "title": "GGGGGG One",
-      "description": "Lorer ink kmkdmasdmkk ankdasdkkdsa",
-      "price": "5000",
+      "title": "Mega trip",
+      "description": "A destination that you are looking forward to",
+      "price": "4985",
       "currency": "USD",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200/nature",
-      "ratings": "5",
+      "ratings": "3",
       "offer": "NO"
     },
     {
@@ -102,12 +102,12 @@
     {
       "title": "Assstione kumKoinc",
       "description": "The kkkjnionc joonas raftssseung ",
-      "price": "341232131312",
+      "price": "3412",
       "currency": "IDR",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200/nature",
       "ratings": "2",
-      "offer": "NO",
+      "offer": "YES",
       "id": 10
     },
     {

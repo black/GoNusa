@@ -1,5 +1,13 @@
 <template>
-    <div class="column is-4 is-desktop">
+    <div class="column">
+        <span class="title is-6 is-spaced">
+            <span class="has-text-grey-light bd-anchor-link">
+                # {{id}}
+            </span>
+            <span class="bd-anchor-name">
+                {{title}}
+            </span>
+        </span>
         <div class="field">
             <div class="control">
                 <input v-model="data.title" class="input" type="text" placeholder="Title">
@@ -24,20 +32,22 @@
                 </div>
             </div>
         </div>
-        <div class="field">
-            <label class="heading"><strong>RATING</strong></label>
+        <div class="field is-grouped">
             <div class="control">
-                <input v-model="data.ratings" max="5" min="1" class="input" type="number" placeholder="Text input">
+                <label class="heading"><strong>RATING</strong></label>
+                <div class="control">
+                    <input v-model="data.ratings" max="5" min="1" class="input" type="number" placeholder="Text input">
+                </div>
             </div>
-        </div>
-        <div class="field">
-            <label class="heading"><strong>OFFER</strong></label>
             <div class="control">
-                <div class="select">
-                    <select v-model="data.offer">
-                        <option>NO</option>
-                        <option>YES</option>
-                    </select>
+                <label class="heading"><strong>OFFER</strong></label>
+                <div class="control">
+                    <div class="select">
+                        <select v-model="data.offer">
+                            <option>NO</option>
+                            <option>YES</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,9 +63,10 @@ module.exports = {
     data: function() {
         return {
             url: "/updateItem",
-            title: 'Add Item',
+            title: 'UPDATE ITEM',
             id: null,
             data: {
+                "id": null,
                 "title": "",
                 "description": "",
                 "price": "",
@@ -71,17 +82,14 @@ module.exports = {
     },
     methods: {
         submitForm() {
-            axios.post(this.url, {
-                "position": this.id,
-                "data": this.data
-            }, {
+            axios.post(this.url, this.data, {
                 onUploadProgress: uploadEvent => {
                     this.uploadStatus = "Progess...";
                 }
             }).then(res => {
-                this.toast("Success");
+                this.toast("Success", true);
             }).catch(res => {
-                this.toast("failed");
+                this.toast("failed", false);
             }).finally(res => {
                 this.resetForm();
             });
@@ -94,18 +102,20 @@ module.exports = {
         },
         receiveEditData() {
             bus.$on('edit_data', (value) => {
-                this.id = value.id;
-                this.data = JSON.parse(JSON.stringify(value));
-                console.log('data', JSON.stringify(value));
+                this.id = (JSON.parse(value)).id;
+                this.data = JSON.parse(value);
+                console.log('data ## ', JSON.parse(value));
             });
         },
-        toast(message) {
+        toast(message, status) {
+            bus.$emit('success-updated', status);
             var options = {
                 style: {
                     main: {
-                        width:"200px",
-                        borderRadius:"5px",
-                        background: "pink",
+                        width: "200px",
+                        borderRadius: "5px",
+                        border: "1px solid #ddd",
+                        background: "#eee",
                         color: "black"
                     }
                 },
@@ -113,7 +123,6 @@ module.exports = {
                     duration: 2000
                 }
             };
-
             iqwerty.toast.Toast(message, options);
         }
     },
