@@ -24,8 +24,9 @@ new Vue({
         'form-component': httpVueLoader('../components/form-component.vue'), 
         'account-component': httpVueLoader('../components/account-component.vue'),
         'testimonial-component': httpVueLoader('../components/testimonial-component.vue'),
+        'adminmain-component': httpVueLoader('../components/admin/adminmain-component.vue'),
         'additem-component': httpVueLoader('../components/admin/additem-component.vue'),
         'updateitem-component': httpVueLoader('../components/admin/updateitem-component.vue'),
-        'itemlist-component': httpVueLoader('../components/admin/itemlist-component.vue')
+        'itemlist-component': httpVueLoader('../components/admin/itemlist-component.vue') 
     }
 });

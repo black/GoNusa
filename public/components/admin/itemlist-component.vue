@@ -13,7 +13,7 @@
             <div class="box" :class="{'active-edit': i == activeIndex}">
                 <div class="columns">
                     <div class="column is-4">
-                        <figure class="image is-square">
+                        <figure class="image is-square" @error="replaceByDefault">
                             <img v-bind:src="item.imgsrc">
                         </figure>
                     </div>
@@ -69,6 +69,9 @@ module.exports = {
         updateData(data, index) {
             this.activeIndex = index;
             bus.$emit('edit_data', JSON.stringify(data));
+        },
+        replaceByDefault(event) {
+            event.target.src = '../img/loading.gif'
         },
         toast(message) {
             var options = {

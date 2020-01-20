@@ -2,20 +2,20 @@
   "data": [
     {
       "id": 1,
-      "title": "Activity Test",
-      "description": "Lorem ipsum desum",
-      "price": "1000",
-      "currency": "INR",
+      "title": "Activity  Test",
+      "description": "Lorem ipsum  Lorem ipsum  Lorem ipsum  ",
+      "price": "3332",
+      "currency": "USD",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200/nature",
-      "ratings": "5",
+      "ratings": "3",
       "offer": "YES"
     },
     {
       "id": 2,
       "title": "Activity Two",
       "description": "Lorem ipsum dolor sit amet.",
-      "price": "1500",
+      "price": "1503",
       "currency": "IDR",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200",
@@ -41,8 +41,8 @@
       "currency": "IDR",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200",
-      "ratings": "5",
-      "offer": "YES"
+      "ratings": "3",
+      "offer": "NO"
     },
     {
       "id": 5,
@@ -53,7 +53,7 @@
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200",
       "ratings": "4",
-      "offer": "NO"
+      "offer": "YES"
     },
     {
       "id": 6,
@@ -64,7 +64,7 @@
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200",
       "ratings": "2",
-      "offer": "YES"
+      "offer": "NO"
     },
     {
       "id": 7,
