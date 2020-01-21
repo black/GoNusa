@@ -9,17 +9,17 @@
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200/nature",
       "ratings": "3",
-      "offer": "YES"
+      "offer": "NO"
     },
     {
       "id": 2,
       "title": "Activity Two",
       "description": "Lorem ipsum dolor sit amet.",
       "price": "1503",
-      "currency": "IDR",
+      "currency": "USD",
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200",
-      "ratings": "3",
+      "ratings": "5",
       "offer": "NO"
     },
     {
@@ -31,7 +31,7 @@
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200/nature",
       "ratings": "3",
-      "offer": "YES"
+      "offer": "NO"
     },
     {
       "id": 4,
@@ -53,7 +53,7 @@
       "date": "",
       "imgsrc": "http://lorempixel.com/400/200",
       "ratings": "4",
-      "offer": "YES"
+      "offer": "NO"
     },
     {
       "id": 6,
@@ -100,7 +100,7 @@
       "offer": "NO"
     },
     {
-      "title": "Assstione kumKoinc",
+      "title": "Assstione kum ",
       "description": "The kkkjnionc joonas raftssseung ",
       "price": "3412",
       "currency": "IDR",

@@ -14,7 +14,10 @@
                 <div class="columns">
                     <div class="column is-4">
                         <figure class="image is-square" @error="replaceByDefault">
-                            <img v-bind:src="item.imgsrc">
+                            <img  
+                                v-bind:src="item.imgsrc"
+                                @load="checkLoad()" 
+                                @error="replaceByDefault($event)">
                         </figure>
                     </div>
                     <div class="column">
@@ -48,7 +51,7 @@ module.exports = {
             title: 'Activities List',
             downloadStatus: '',
             listContent: [],
-            activeIndex: null
+            activeIndex: null 
         }
     },
     methods: {
@@ -66,12 +69,15 @@ module.exports = {
                     //his.toast("Completed Request");
                 });
         },
+        checkLoad(){ 
+            console.log("loaded");
+        },
         updateData(data, index) {
             this.activeIndex = index;
             bus.$emit('edit_data', JSON.stringify(data));
         },
         replaceByDefault(event) {
-            event.target.src = '../img/loading.gif'
+            event.target.src = '../img/placeholder.png'
         },
         toast(message) {
             var options = {
