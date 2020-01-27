@@ -51,9 +51,17 @@
                 </div>
             </div>
         </div>
+        <div class="field">
+            <div class="control">
+                <input v-model="data.filters" class="input" type="text" placeholder="Add Tags">
+            </div>
+        </div>
         <div class="field is-grouped">
             <div class="control">
-                <button class="button is-link" @click="submitForm">UPDATE</button>
+                <button class="button is-link" @click="updateData">UPDATE</button>
+            </div>
+            <div class="control">
+                <button class="button" @click="deleteItem"><span class="has-text-danger">DELETE</span></button>
             </div>
         </div>
     </div>
@@ -62,7 +70,8 @@
 module.exports = {
     data: function() {
         return {
-            url: "/updateItem",
+            updateURL: "/updateItem",
+            delURL: "/deleteItem",
             title: 'UPDATE ITEM',
             id: null,
             data: {
@@ -72,6 +81,7 @@ module.exports = {
                 "price": "",
                 "currency": "IDR",
                 "date": "",
+                "filters":[],
                 "imgsrc": "http://lorempixel.com/400/200/nature",
                 "ratings": 0,
                 "offer": "NO"
@@ -81,8 +91,8 @@ module.exports = {
         }
     },
     methods: {
-        submitForm() {
-            axios.post(this.url, this.data, {
+        updateData() {
+            axios.post(this.updateURL, this.data, {
                 onUploadProgress: uploadEvent => {
                     this.uploadStatus = "Progess...";
                 }
@@ -95,7 +105,21 @@ module.exports = {
             });
             this.status = true;
         },
+        deleteItem() {
+            axios.post(this.delURL, { "id": this.id })
+                .then((resp) => {
+                    console.log("deleted item");
+                    this.toast("Deleted");
+                }).catch(error => {
+                    if (error.response) {
+                        this.toast("failed");
+                    }
+                }).finally(res => {
+                    this.resetForm();
+                });
+        },
         resetForm() {
+            this.id = '';
             Object.keys(this.data).forEach(key => {
                 this.data[key] = ''
             });
@@ -108,7 +132,7 @@ module.exports = {
             });
         },
         toast(message, status) {
-            bus.$emit('success-updated', status);
+            bus.$emit('changed-data', status);
             var options = {
                 style: {
                     main: {

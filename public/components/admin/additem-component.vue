@@ -1,5 +1,13 @@
 <template>
     <div class="column">
+        <span class="title is-6 is-spaced">
+            <span class="has-text-grey-light bd-anchor-link">
+                #
+            </span>
+            <span class="bd-anchor-name">
+                {{title}}
+            </span>
+        </span>
         <div class="field">
             <div class="control">
                 <input v-model="data.title" class="input" type="text" placeholder="Title">
@@ -24,30 +32,33 @@
                 </div>
             </div>
         </div>
-        <div class="field">
-            <div class="field is-grouped">
+        <div class="field is-grouped">
+            <div class="control">
+                <label class="heading"><strong>RATING</strong></label>
                 <div class="control">
-                    <label class="heading"><strong>RATING</strong></label>
-                    <div class="control">
-                        <input v-model="data.ratings" max="5" min="1" class="input" type="number" placeholder="Text input">
-                    </div>
+                    <input v-model="data.ratings" max="5" min="1" class="input" type="number" placeholder="Text input">
                 </div>
+            </div>
+            <div class="control">
+                <label class="heading"><strong>OFFER</strong></label>
                 <div class="control">
-                    <label class="heading"><strong>OFFER</strong></label>
-                    <div class="control">
-                        <div class="select">
-                            <select v-model="data.offer">
-                                <option>NO</option>
-                                <option>YES</option>
-                            </select>
-                        </div>
+                    <div class="select">
+                        <select v-model="data.offer">
+                            <option>NO</option>
+                            <option>YES</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="field">
+            <div class="control">
+                <input v-model="data.filters" class="input" type="text" placeholder="Add Tags">
+            </div>
+        </div>
         <div class="field is-grouped">
             <div class="control">
-                <button class="button is-link" @click="submitForm">ADD ITEM</button>
+                <button class="button is-success" @click="submitForm">ADD ITEM</button>
             </div>
         </div>
     </div>
@@ -57,13 +68,14 @@ module.exports = {
     data: function() {
         return {
             url: "/addItem",
-            title: 'Add Item',
+            title: 'ADD ITEMS',
             data: {
                 "title": "",
                 "description": "",
                 "price": "",
                 "currency": "IDR",
                 "date": "",
+                "filters": [],
                 "imgsrc": "http://lorempixel.com/400/200/nature",
                 "ratings": 0,
                 "offer": "NO"
@@ -88,11 +100,12 @@ module.exports = {
             this.status = true;
         },
         resetForm() {
-           /* Object.keys(this.data).forEach(key => {
+            Object.keys(this.data).forEach(key => {
                 this.data[key] = ''
-            });*/
+            });
         },
         toast(message) {
+            bus.$emit('changed-data', status);
             var options = {
                 style: {
                     main: {

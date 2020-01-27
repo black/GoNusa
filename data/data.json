@@ -2,91 +2,31 @@
   "data": [
     {
       "id": 1,
-      "title": "Activity  Test",
+      "title": "Activity  Test 3",
       "description": "Lorem ipsum  Lorem ipsum  Lorem ipsum  ",
       "price": "3332",
       "currency": "USD",
       "date": "",
-      "imgsrc": "http://lorempixel.com/400/200/nature",
+      "filters": [
+        "all",
+        "adventure",
+        "spa"
+      ],
+      "imgsrc": "http://localhost:9090/random",
       "ratings": "3",
-      "offer": "NO"
-    },
-    {
-      "id": 2,
-      "title": "Activity Two",
-      "description": "Lorem ipsum dolor sit amet.",
-      "price": "1503",
-      "currency": "USD",
-      "date": "",
-      "imgsrc": "http://lorempixel.com/400/200",
-      "ratings": "5",
-      "offer": "NO"
-    },
-    {
-      "id": 3,
-      "title": "Mega trip",
-      "description": "A destination ",
-      "price": "2530",
-      "currency": "IDR",
-      "date": "",
-      "imgsrc": "http://lorempixel.com/400/200/nature",
-      "ratings": "3",
-      "offer": "NO"
-    },
-    {
-      "id": 4,
-      "title": "Activity Four",
-      "description": "Lorem ipsum dolor sit amet.",
-      "price": "6000",
-      "currency": "IDR",
-      "date": "",
-      "imgsrc": "http://lorempixel.com/400/200",
-      "ratings": "3",
-      "offer": "NO"
-    },
-    {
-      "id": 5,
-      "title": "Activity Three",
-      "description": "Lorem ipsum dolor sit amet.",
-      "price": "6000",
-      "currency": "IDR",
-      "date": "",
-      "imgsrc": "http://lorempixel.com/400/200",
-      "ratings": "4",
       "offer": "NO"
     },
     {
       "id": 6,
-      "title": "Activity Four",
-      "description": "Lorem ipsum dolor sit amet.",
+      "title": "Activity Six",
+      "description": "Lorem ipsum ",
       "price": "6000",
       "currency": "IDR",
       "date": "",
-      "imgsrc": "http://lorempixel.com/400/200",
+      "filters": "all,spa,else,new",
+      "imgsrc": "http://localhost:9090/random",
       "ratings": "2",
       "offer": "NO"
-    },
-    {
-      "id": 7,
-      "title": "Activity Three",
-      "description": "Lorem ipsum dolor sit amet.",
-      "price": "600",
-      "currency": "IDR",
-      "date": "",
-      "imgsrc": "http://lorempixel.com/400/200",
-      "ratings": "5",
-      "offer": "NO"
-    },
-    {
-      "id": 8,
-      "title": "Activity Four",
-      "description": "Lorem ipsum dolor sit amet.",
-      "price": "6000",
-      "currency": "IDR",
-      "date": "",
-      "imgsrc": "http://lorempixel.com/400/200",
-      "ratings": "2",
-      "offer": "YES"
     },
     {
       "id": 9,
@@ -95,31 +35,80 @@
       "price": "600",
       "currency": "IDR",
       "date": "",
-      "imgsrc": "http://lorempixel.com/400/200",
+      "filters": [
+        "all",
+        "adventure",
+        "spa",
+        "else"
+      ],
+      "imgsrc": "http://localhost:9090/random",
       "ratings": "5",
       "offer": "NO"
     },
     {
-      "title": "Assstione kum ",
-      "description": "The kkkjnionc joonas raftssseung ",
-      "price": "3412",
-      "currency": "IDR",
+      "title": "Mating Luthar King",
+      "description": "King of north dark snow rid",
+      "price": "3003",
+      "currency": "USD",
       "date": "",
-      "imgsrc": "http://lorempixel.com/400/200/nature",
-      "ratings": "2",
-      "offer": "YES",
-      "id": 10
-    },
-    {
-      "title": "dasdasdasd",
-      "description": "dasdasddadsa",
-      "price": "324234",
-      "currency": "IDR",
-      "date": "",
+      "filters": [
+        "all",
+        "adventure",
+        "hotels",
+        "spa"
+      ],
       "imgsrc": "http://lorempixel.com/400/200/nature",
       "ratings": "5",
+      "offer": "YES",
+      "id": 12
+    },
+    {
+      "title": "Reset",
+      "description": "rwerwer",
+      "price": "2222",
+      "currency": "INR",
+      "date": "",
+      "filters": "all,else",
+      "imgsrc": "http://lorempixel.com/400/200/nature",
+      "ratings": "5",
+      "offer": "YES",
+      "id": 13
+    },
+    {
+      "title": "YYUU",
+      "description": "dadasd",
+      "price": "23432432",
+      "currency": "USD",
+      "date": "",
+      "filters": "all,spa",
+      "imgsrc": "http://lorempixel.com/400/200/nature",
+      "ratings": "1",
       "offer": "NO",
-      "id": 11
+      "id": 14
+    },
+    {
+      "title": "rwerw erwe rwe",
+      "description": " rwer wr w",
+      "price": "9090",
+      "currency": "INR",
+      "date": "",
+      "filters": "hotel,spa",
+      "imgsrc": "",
+      "ratings": "4",
+      "offer": "NO",
+      "id": 16
+    },
+    {
+      "title": "Test Card",
+      "description": "This is the description of test card",
+      "price": "3400",
+      "currency": "USD",
+      "date": "",
+      "filters": "new,hotel,adventure",
+      "imgsrc": "http://lorempixel.com/400/200/nature",
+      "ratings": "4",
+      "offer": "YES",
+      "id": 17
     }
   ]
 }

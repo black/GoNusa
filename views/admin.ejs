@@ -11,10 +11,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
-<body class="has-navbar-fixed-top  is-fullheight">
-    <div id="app" class="container">
+<body class="is-fullheight" style="overflow: hidden;">
+    <div id="app" class="is-fixed">
         <div class="columns">
-            <div class="column is-2">
+            <div class="column is-2 is-fullheight  has-background-white-ter">
                 <div>
                     <aside class="menu">
                         <p class="menu-label">
@@ -23,7 +23,7 @@
                         <ul class="menu-list">
                             <li><a>Dashboard</a></li>
                             <li><a>Customers</a></li>
-                        </ul> 
+                        </ul>
                         <p class="menu-label">
                             Transactions
                         </p>
@@ -39,17 +39,7 @@
                 <itemlist-component></itemlist-component>
             </div>
             <div class="column is-3">
-                <updateitem-component></updateitem-component>
-                <br><br>
-                <span class="title is-6 is-spaced">
-                    <span class="has-text-grey-light bd-anchor-link">
-                        #
-                    </span>
-                    <span class="bd-anchor-name">
-                        ADD ITEMS
-                    </span>
-                </span>
-                <additem-component></additem-component>
+                <editable-component></editable-component>  
             </div>
         </div>
     </div>
