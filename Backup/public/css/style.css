@@ -1,0 +1,13 @@
+
+
+.header-image {
+    background-image: url("../img/contact.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;  
+} 
+
+.padding-rb{
+  padding: 10px 20px 20px 10px;
+}

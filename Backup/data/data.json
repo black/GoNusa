@@ -1,0 +1,120 @@
+{
+    "data": [
+    {
+        "id": 1,
+        "title": "Activity  Test 3",
+        "description": "Lorem ipsum  Lorem ipsum  Lorem ipsum  ",
+        "price": "3332",
+        "date": "",
+        "tags": [
+            "adventure",
+            "spa",
+            "else"
+        ],
+        "imgsrc": "http://localhost:9090/random",
+        "ratings": "3",
+        "offer": "NO"
+    },
+    {
+        "id": 6,
+        "title": "Activity Six",
+        "description": "Lorem ipsum ",
+        "price": "6000",
+        "currency": "IDR",
+        "date": "",
+        "tags": [" hotel"],
+        "imgsrc": "http://localhost:9090/random",
+        "ratings": "2",
+        "offer": "NO"
+    },
+    {
+        "id": 9,
+        "title": "Activity Three",
+        "description": "Lorem ipsum dolor sit amet.",
+        "price": "600",
+        "currency": "IDR",
+        "date": "",
+        "tags": [
+            "adventure",
+            "spa",
+            "else"
+        ],
+        "imgsrc": "http://localhost:9090/random",
+        "ratings": "5",
+        "offer": "NO"
+    },
+    {
+        "title": "Mating Luthar King",
+        "description": "King of north dark snow rid",
+        "price": "3003",
+        "date": "",
+        "tags": [
+            "adventure",
+            "spa",
+            "else"
+        ],
+        "imgsrc": "http://lorempixel.com/400/200/nature",
+        "ratings": "5",
+        "offer": "YES",
+        "id": 12,
+        "filters": [" hotel", "spa"]
+    },
+    {
+        "title": "Reset",
+        "description": "rwerwer",
+        "price": "2221",
+        "currency": "INR",
+        "date": "",
+        "tags": [
+            "adventure",
+            "spa",
+            "else"
+        ],
+        "imgsrc": "http://lorempixel.com/400/200/nature",
+        "ratings": "1",
+        "offer": "YES",
+        "id": 13
+    },
+    {
+        "title": "YYUU",
+        "description": "dadasd",
+        "price": "23432432",
+        "date": "",
+        "tags": ["all", "spa"],
+        "imgsrc": "http://lorempixel.com/400/200/nature",
+        "ratings": "1",
+        "offer": "NO",
+        "id": 14
+    },
+    {
+        "title": "rwerw erwe rwe",
+        "description": " rwer wr w",
+        "price": "9090",
+        "currency": "INR",
+        "date": "",
+        "tags": [
+            "adventure",
+            "spa",
+            "else"
+        ],
+        "imgsrc": "",
+        "ratings": "4",
+        "offer": "NO",
+        "id": 16
+    },
+    {
+        "title": "Test Card",
+        "description": "This is the description of test card",
+        "price": "3400",
+        "date": "",
+        "tags": [
+            "adventure",
+            "spa",
+            "else"
+        ],
+        "imgsrc": "http://lorempixel.com/400/200/nature",
+        "ratings": "4",
+        "offer": "YES",
+        "id": 17
+    }]
+}

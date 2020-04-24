@@ -23,13 +23,7 @@
                 <input v-model="data.price" class="input" type="number" placeholder="Price">
             </div>
             <div class="control">
-                <div class="select">
-                    <select v-model="data.currency">
-                        <option>INR</option>
-                        <option>IDR</option>
-                        <option>USD</option>
-                    </select>
-                </div>
+                <span>IDR</span>
             </div>
         </div>
         <div class="field is-grouped">
@@ -52,8 +46,9 @@
             </div>
         </div>
         <div class="field">
-            <div class="control">
-                <input v-model="data.filters" class="input" type="text" placeholder="Add Tags">
+            <div class="control tags">
+                <!-- <input v-model="data.tags" class="input" type="text" placeholder="Add Tags"> -->
+                <span class="tag" v-for="tag in data.tags">{{tag}}</span>
             </div>
         </div>
         <div class="field is-grouped">
@@ -79,9 +74,8 @@ module.exports = {
                 "title": "",
                 "description": "",
                 "price": "",
-                "currency": "IDR",
                 "date": "",
-                "filters":[],
+                "tags": [],
                 "imgsrc": "http://lorempixel.com/400/200/nature",
                 "ratings": 0,
                 "offer": "NO"

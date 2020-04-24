@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Go Nusa trips Admin Page</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="columns is-fullheight has-background-light-grey">
+            <div class="column is-2 has-background-danger">
+                <admin-login></admin-login>
+                <aside class="menu">
+                    <p class="menu-label">
+                        General
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Dashboard</a></li>
+                        <li><a>Customers</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        Transactions
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Payments</a></li>
+                        <li><a>Transfers</a></li>
+                        <li><a>Balance</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column scrollView has-background-light">
+                <div class="scrollView">
+                    <!--  <itemlist-component></itemlist-component> -->
+                </div>
+            </div>
+            <div class="column is-fullheight is-3 has-background-dark">
+                <editable-component></editable-component>
+            </div>
+        </div>
+    </div>
+    <!--     firebase files -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase.js"></script>
+    <!-- vuejs libs -->
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript" src="https://unpkg.com/http-vue-loader"></script>
+    <!--     3rd party libs -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <script type="text/javascript" src="../js/firebase-init.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+</body>
+
+</html>

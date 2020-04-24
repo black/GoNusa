@@ -2,14 +2,14 @@
     <div class="columns is-multiline">
         <div class="tabs is-centered">
             <ul>
-                <li v-on:click="filterType=='all'" class="is-active"><a>All</a></li>
+                <li v-on:click="filterType='all'"><a>All</a></li>
                 <li v-on:click="filterType='adventure'"><a>Adventure</a></li>
                 <li v-on:click="filterType='hotels'"><a>Hotels</a></li>
                 <li v-on:click="filterType='spa'"><a>Spa</a></li>
                 <li v-on:click="filterType='else'"><a>Something Else</a></li>
             </ul>
         </div>
-        <div class="column is-6-desktop" v-for="item,i in listContent">
+        <div class="column is-6-desktop" v-for="item,i in filteredItems">
             <div class="box" :class="{'active-edit': i == activeIndex}" v-on:click="updateData(item,i)">
                 <div class="columns">
                     <div class="column is-4">
@@ -43,8 +43,8 @@
 <script>
 module.exports = {
     data: function() {
-        return {
-            url: "/getAllItems",
+        return { 
+            db: firebase.firestore(),
             title: 'Activities List',
             downloadStatus: '',
             listContent: [],
@@ -54,18 +54,15 @@ module.exports = {
     },
     methods: {
         getJSONdata() {
-            axios.get(this.url)
-                .then((resp) => {
-                    this.listContent = resp.data;
-                    console.log(this.listContent);
-                    this.toast("success");
-                }).catch(error => {
-                    if (error.response) {
-                        this.toast("failed");
-                    }
-                }).finally(() => {
-                    //his.toast("Completed Request");
+            this.db.collection('places').get().then((snapshot) => {
+                snapshot.forEach(doc => {
+                    console.log(doc.data());
+                    this.listContent.push(doc.data());
                 });
+                this.downloadStatus = "success";
+            }).catch(function(error) {
+                console.log("Error getting document:", error);
+            });
         },
         checkLoad() {
             console.log("loaded");
@@ -92,13 +89,28 @@ module.exports = {
                     duration: 2000
                 }
             };
-
             iqwerty.toast.Toast(message, options);
         },
-        filterList(value) {
-            return true;
-            /* let _data =  Array.from(value); // .includes(this.filterType);  
-              console.log(_data);*/
+        convertPrice(from_price, to_price) {
+            /*axios.get('https://api.exchangeratesapi.io/latest?symbols=' + from_price + "," + to_price)
+                .then((data) => {
+                    console.log(data);
+                    //return data;
+                }).catch((err) => {
+                    console.log("ERROR", err);
+                }).finally(() => {
+
+                });
+            return from_pric;*/
+        }
+    },
+    computed: {
+        filteredItems() {
+            return this.listContent.filter(content => {
+                console.log("FILTER: ", this.filterType, content);
+                if (this.filterType != 'all') return content.tags.indexOf(this.filterType.toLowerCase()) > -1;
+                else return this.listContent;
+            })
         }
     },
     mounted() {

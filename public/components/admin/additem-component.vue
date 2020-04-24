@@ -53,7 +53,7 @@
         </div>
         <div class="field">
             <div class="control">
-                <input v-model="data.filters" class="input" type="text" placeholder="Add Tags">
+                <input v-model="data.tags" class="input" type="text" placeholder="Add Tags">
             </div>
         </div>
         <div class="field is-grouped">
@@ -67,15 +67,13 @@
 module.exports = {
     data: function() {
         return {
-            url: "/addItem",
             title: 'ADD ITEMS',
             data: {
                 "title": "",
                 "description": "",
                 "price": "",
-                "currency": "IDR",
-                "date": "",
-                "filters": [],
+                "currency": "IDR", 
+                "tags": [],
                 "imgsrc": "http://lorempixel.com/400/200/nature",
                 "ratings": 0,
                 "offer": "NO"
@@ -86,18 +84,11 @@ module.exports = {
     },
     methods: {
         submitForm() {
-            axios.post(this.url, this.data, {
-                onUploadProgress: uploadEvent => {
-                    this.uploadStatus = "Progess...";
-                }
-            }).then(res => {
-                this.toast("success");
-            }).catch(res => {
-                this.toast("failed");
-            }).finally(res => {
+            var addMessage = firebase.functions().httpsCallable('addContent');
+            addMessage({ text: this.data }).then(function(result) {
+                console.log('added');
                 this.resetForm();
-            })
-            this.status = true;
+            });
         },
         resetForm() {
             Object.keys(this.data).forEach(key => {
