@@ -5,7 +5,7 @@
                 <div class="columns is-mobile is-multiline">
                     <div class="column is-4-mobile is-full-desktop">
                         <figure class="image is-square">
-                            <img v-bind:src="item.imgsrc">
+                            <img v-bind:src="getImageSrc(item.imgsrc)">
                         </figure>
                     </div>
                     <div class="column is-8-mobile">
@@ -37,6 +37,7 @@ module.exports = {
     data: function() {
         return {
             db: firebase.firestore(),
+            storage: firebase.storage().ref("images"),
             title: 'Activities List',
             downloadStatus: '',
             status: false,
@@ -47,13 +48,23 @@ module.exports = {
         getJSONdata() {
             this.db.collection('places').get().then((snapshot) => {
                 snapshot.forEach(doc => {
-                    console.log(doc.data());
                     this.listContent.push(doc.data());
                 });
                 this.downloadStatus = "success";
             }).catch(function(error) {
                 console.log("Error getting document:", error);
             });
+        },
+        getImageSrc(id) {
+            console.log(id);
+            let ref = this.storage.child(id + ".webp");
+            ref.getDownloadURL().then((url) => {
+                console.log(url);
+                return url;
+            }).catch(err => {
+                console.log(err);
+                return null;
+            })
         },
         openCollection(event) {
             console.log("clicked");

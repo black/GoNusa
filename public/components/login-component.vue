@@ -7,11 +7,11 @@
         <div class="hidden-info">
             <span>{{username}}</span>
             <span>{{usermail}}</span>
-            <img class="signOut" src="../img/sign-out.svg" v-on:click="googleSignOut()">
         </div>
         <div  v-show="!card" class="beforelogin">
             <img class="signIn" src="../img/google.png" alt="" v-on:click="googleSignIn()"> 
         </div>
+            <img class="signOut" src="../img/sign-out.svg" v-on:click="googleSignOut()">
     </div>
 </template>
 <script>

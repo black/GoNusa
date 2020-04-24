@@ -32,15 +32,13 @@ exports.addContent = functions.https.onCall((data, context) => {
             'while authenticated.');
     }
 
-    firedatabase.collection('places').add(data.text)
+    return firedatabase.collection('places').add(data.text)
         .then(res => {
-            console.log(res);
+            return {
+            	status:"success"
+            }
         })
         .cathc(err => {
             throw new functions.https.HttpsError('unknown', error.message, error);
         });
-
-    return {
-        data: "success"
-    }
 });
