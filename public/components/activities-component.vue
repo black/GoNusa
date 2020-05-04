@@ -55,14 +55,11 @@ module.exports = {
                 console.log("Error getting document:", error);
             });
         },
-        getImageSrc(id) {
-            console.log(id);
+        getImageSrc(id) { 
             let ref = this.storage.child(id + ".webp");
-            ref.getDownloadURL().then((url) => {
-                console.log(url);
+            ref.getDownloadURL().then((url) => { 
                 return url;
-            }).catch(err => {
-                console.log(err);
+            }).catch(err => { 
                 return null;
             })
         },
