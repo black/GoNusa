@@ -3,9 +3,9 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import '@/firebase/fire'
 import '@/assets/css/style.css'
 import '@mdi/font/css/materialdesignicons.css'
-import '@/firebase/fire'
 
 Vue.config.productionTip = false
 

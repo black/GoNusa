@@ -2,6 +2,9 @@ const getters = {
   getAdmin(state) {
     return state.admin;
   },
+  getAuthState(state) {
+    return state.authenticated;
+  },
   getVizType(state) {
     return state.chart;
   },

@@ -5,7 +5,7 @@ const actions = {
   checkAdmin(context) {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        keepState(context, user, true, '/home');
+        keepState(context, user, true, '/');
       } else {
         keepState(context, "", false, '/');
       }
@@ -15,7 +15,7 @@ const actions = {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
       .then((res) => {
-        keepState(context, res.user, true, '/home');
+        keepState(context, res.user, true, '/');
       }).catch((err) => {
         console.log('err:', err);
       });
@@ -58,7 +58,6 @@ function keepState(context, user, state, uri) {
   context.dispatch('setAdmin', user);
   context.dispatch('setAuthState', state);
   router.push(uri);
-  console.log(user);
 }
 
 export default actions;
